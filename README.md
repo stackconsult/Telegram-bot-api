@@ -1,63 +1,57 @@
 # Telegram Bot API Template
 
-A production-ready Telegram bot API template for agent orchestration and multi-agent chat systems.
+Production-ready Telegram bot with agent orchestration.
 
-## 🚀 Quick Start
+## Quick Start
 
 ```bash
-# Install dependencies
+# Setup
 pip install -r requirements.txt
-
-# Configure environment
 cp .env.example .env
-# Edit .env with your bot token
+# Add your bot token to .env
 
-# Run the bot
+# Run bot
 python -m bot.main
 
-# Or run API server
+# Run API server
 uvicorn api.main:app --reload
 ```
 
-## 📁 Structure
+## Structure
 
-```text
-bot/           # Core bot functionality
-agents/        # Agent orchestration system
-api/           # REST API endpoints
-config/        # Configuration management
-tests/         # Test suite
-docker/        # Docker configuration
-```
+- `bot/` - Core bot functionality
+- `agents/` - Agent orchestration
+- `api/` - REST API
+- `config/` - Configuration
+- `tests/` - Test suite
 
-## 🤖 Agent Features
+## Features
 
 - Multi-agent coordination
-- Chat group management
 - Message routing
 - Rate limiting
-- Production deployment
+- Docker deployment
+- REST API
 
-## 🐳 Docker Deployment
+## Docker
 
 ```bash
 docker-compose up -d
 ```
 
-## 📚 API Documentation
+## Config
 
-Visit `http://localhost:8000/docs` for interactive API docs.
-
-## 🔧 Configuration
-
-Key environment variables:
+Required env vars:
 
 - `BOT_TOKEN` - Telegram bot token
-- `WEBHOOK_URL` - Webhook URL (production)
-- `ADMIN_USER_ID` - Admin Telegram user ID
+- `ADMIN_USER_ID` - Admin user ID
 
-## 🧪 Testing
+## Test
 
 ```bash
-pytest tests/ -v --cov=bot
+pytest tests/ -v
 ```
+
+## API Docs
+
+Visit `http://localhost:8000/docs`
